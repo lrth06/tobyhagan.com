@@ -12,6 +12,8 @@ export default function Home({ articles }) {
 
 
 export async function getServerSideProps() {
+    if (!process.env.MONGODB_URI) { return { props: { articles: null } } }
+
     await dbConnect()
     const result = await Article.find({}).limit(25).sort({ created_at: -1 })
     const articles = result.map((doc) => {

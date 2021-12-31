@@ -6,18 +6,30 @@ export default function contact() {
             name: 'name',
             label: 'Name',
             type: 'text',
+            required: true,
             placeholder: 'Enter your name',
         },
         {
             name: 'email',
             label: 'Email',
             type: 'email',
+            required: true,
+
             placeholder: 'Enter your email',
+        },
+        {
+            name: 'phone',
+            label: 'Phone (optional)',
+            type: 'tel',
+
+            placeholder: 'Enter your phone number',
         },
         {
             name: 'message',
             label: 'Message',
             type: 'textarea',
+            required: true,
+
             placeholder: 'Enter your message',
         },
 
