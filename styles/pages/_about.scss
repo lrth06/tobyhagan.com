@@ -1,0 +1,27 @@
+@import '../variables/breakpoints';
+.bio__photo {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #474da9;
+}
+
+@media screen and (max-width: $laptop) {
+  .bio__photo {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .bio__photo {
+    width: 65%;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .bio__photo {
+    width: 80%;
+  }
+}

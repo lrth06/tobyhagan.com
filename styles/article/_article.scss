@@ -1,0 +1,97 @@
+@import '../variables';
+
+.page__hero {
+  display: block;
+  overflow: hidden;
+  padding-top: 2em;
+  border-bottom: $border-width solid $border-color;
+  padding-bottom: 1em;
+}
+.page__hero-content {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.post__author,
+.card__author {
+  font-size: 1.2em;
+  font-family: 'Open Sans SemiCondensed';
+  span {
+    color: $accent-color;
+  }
+}
+.post__tags {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: fit-content;
+  align-items: center;
+  border-radius: 0.2em;
+  padding: 0.1em;
+  .post__tag {
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: 'Open Sans SemiCondensed';
+    margin: 0 0.25em;
+  }
+  svg {
+    margin-right: 0.5em;
+  }
+}
+.post__body-image {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  // padding-bottom: 0.5em;
+  padding: 0.5em 0;
+  border-bottom: $border-width solid $border-color;
+
+  span {
+    font-weight: 600;
+    font-size: 0.8em;
+    font-family: 'Open Sans SemiCondensed';
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+      0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+figcaption {
+  font-size: 0.8em;
+  font-family: 'Open Sans SemiCondensed';
+  top: 0;
+  margin: 0;
+  padding: 0.5em 0 0 0;
+}
+
+blockquote p {
+  padding: 0 1em;
+  margin-left: 16px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-left: 0.25em solid #57606a;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.articleCard__container {
+  width: 60%;
+  height: 100%;
+  border-radius: 0.2em;
+  margin: 1em auto 0;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.articleCard__title {
+  padding: 1em;
+  border-top: $border-width solid $border-color;
+}
+.card__image {
+  border-radius: 0.2em 0.2em 0 0;
+}
+.card__more {
+  width: 100%;
+  text-align: right;
+  a {
+    margin: 0.5em;
+  }
+}

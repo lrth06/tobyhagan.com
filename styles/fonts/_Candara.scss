@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Candara';
+    src: local('Candara Light Italic'), local('Candara-LightItalic'),
+        url('/fonts/Candara/Candara-LightItalic.woff2') format('woff2'),
+        url('/fonts/Candara/Candara-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: local('Candara Light'), local('Candara-Light'),
+        url('/fonts/Candara/Candara-Light.woff2') format('woff2'),
+        url('/fonts/Candara/Candara-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: local('Candara Italic'), local('Candara-Italic'),
+        url('/fonts/Candara/Candara-Italic.woff2') format('woff2'),
+        url('/fonts/Candara/Candara-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: local('Candara Bold'), local('Candara-Bold'),
+        url('/fonts/Candara/Candara-Bold.woff2') format('woff2'),
+        url('/fonts/Candara/Candara-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: local('Candara Bold Italic'), local('Candara-BoldItalic'),
+        url('/fonts/Candara/Candara-BoldItalic.woff2') format('woff2'),
+        url('/fonts/Candara/Candara-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Candara';
+    src: local('Candara'),
+        url('/fonts/Candara/Candara.woff2') format('woff2'),
+        url('/fonts/Candara/Candara.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

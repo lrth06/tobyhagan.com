@@ -1,0 +1,36 @@
+.profile{
+    .profile__header{
+        width: 100%;
+        text-align: center;
+    }
+    &__image{
+        width:200px;
+        display: block;
+        padding:2.5em;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        margin: 1em auto;
+    }
+    &__bio{
+        border:1px solid currentColor;
+        padding:1em;
+    }
+    &__posts{
+        border:1px solid currentColor;
+        padding: 1em;
+        margin: 1em auto;
+    }
+    &__edit{
+       background-color: transparent;
+            border:none;
+            outline: none;
+            cursor: pointer;
+          
+            &:active{
+                transform: scale(0.9);
+            }
+            }
+     
+
+}
+
