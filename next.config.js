@@ -15,7 +15,6 @@ module.exports = {
     domains: ['localhost', 'storage.googleapis.com',],
     formats: ['image/avif', 'image/webp'],
     optimizeImages: true,
-    imageSizes: [200, 400, 800, 1600],
     minimumCacheTTL: 60,
   },
   webpack: (config, { dev, isServer }) => {

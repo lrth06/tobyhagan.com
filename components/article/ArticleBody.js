@@ -8,9 +8,6 @@ import Tag from '../../icons/tag.svg'
 export default function Article({ article }) {
   const CustomCode = dynamic((props) => import('./CustomCode').then(mod => mod.CustomCode))
   const CustomImage = dynamic((props) => import('./CustomImage').then(mod => mod.CustomImage))
-  const myLoader = ({ src, width, quality }) => {
-    return `https://tobyhagan.com/${src}?w=${width}&q=${quality || 50}`
-  }
   return (
     <>
       {article ? (
@@ -22,7 +19,6 @@ export default function Article({ article }) {
                 src={article.image.url}
                 width={16}
                 height={9}
-                loader={myLoader}
                 layout="responsive"
                 alt={article.image.alt}
               />

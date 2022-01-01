@@ -10,7 +10,7 @@ export default function ArticleList({ articles }) {
       {articles && articles.length > 0 &&
         articles.map((article, index) => (
           <>
-            <Suspense fallback={<CardLoader key={index} />} key={article._id}>
+            <Suspense fallback={<CardLoader key={index} />} key={index}>
               <ArticleCard key={article._id} article={article} />
             </Suspense>
           </>

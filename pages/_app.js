@@ -4,6 +4,8 @@ import { ThemeContext } from '../context/ThemeContext';
 import { Cookies } from '../components/Cookie';
 import { useEffect, useMemo, useState } from 'react';
 
+import Script from "next/script";
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const [dark, setDark] = useState(null);
@@ -44,6 +46,55 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeContext.Provider value={themeValue}>
       <div className="app__container">
+
+        <Script
+          id="localBusiness"
+          strategy="afterInteractive"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Toby Hagan",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Christiansburg",
+                addressRegion: "VA",
+                postalCode: "24073",
+                addressCountry: "US",
+                streetAddress: "Christiansburg, Va",
+              },
+              url: "https://tobyhagan.com",
+              priceRange: "$$",
+              telephone: "+15402008108",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "00:00",
+                  closes: "23:59",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Sunday",
+                  opens: "00:00",
+                  closes: "00:00",
+                },
+              ],
+            })
+          }}
+        />
+        <Head>
+          <meta charSet="utf-8" />
+          <meta name="theme-color" content="#1e2227" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="robots" content="index, follow" />
+          <meta name="googlebot" content="index, follow" />
+          <meta name="referrer" content="origin" />
+          <meta name="copyright" content="Toby Hagan" />
+          <link rel="manifest" href="/manifest.json" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Layout>
           <Component {...pageProps} />
           <Cookies />

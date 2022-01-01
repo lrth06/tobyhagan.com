@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://tobyhagan.com/sitemap.xml

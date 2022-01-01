@@ -1,14 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image';
 export default function ArticleCard({ article }) {
-  const myLoader = ({ src, width, quality }) => {
-    return `https://tobyhagan.com/${src}?w=${width}&q=${quality || 50}`
-  }
   return (
     <div className="articleCard__container">
       <Link href="/blog/[slug]" as={`/blog/${article.slug}`} passHref>
         <a>
-          <Image priority className='card__image' src={article.image.url} width={16} height={9} layout="responsive" alt={article.image.alt} loader={myLoader} />
+          <Image priority className='card__image' src={article.image.url} width={16} height={9} layout="responsive" alt={article.image.alt} />
         </a>
       </Link>
       <div className="articleCard__title">
