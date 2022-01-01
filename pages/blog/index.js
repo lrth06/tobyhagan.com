@@ -34,6 +34,8 @@ export default function Home({ articles }) {
 
             <Head>
                 <title>Blog</title>
+                <meta name="description" content="Blog posts by Toby Hagan" />
+
             </Head>
             <h1 style={{ textAlign: "center" }}>Recent Blog Posts</h1>
             <ArticleList articles={articles} />
