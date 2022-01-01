@@ -52,7 +52,7 @@ export default function Layout({ children }) {
                             }}
                             className="navigation__item"
                         >
-                            <a className="navigation__link">{link.label}</a>
+                            <Link href={link.href}><a className="navigation__link">{link.label}</a></Link>
                         </li>
                     ))}
                     <li className="navigation__item">
@@ -61,6 +61,8 @@ export default function Layout({ children }) {
                 </ul>
 
                 <button
+                    aria-label='Toggle navigation'
+                    name="navigation-toggle"
                     onClick={handleNavigationToggle}
                     className="navigation__toggle"
                     style={{

@@ -1,4 +1,3 @@
-// const sparkPost = require("sparkpost");
 import sparkPost from "sparkpost";
 const client = new sparkPost(process.env.SPARKPOST_KEY);
 

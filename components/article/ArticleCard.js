@@ -5,7 +5,7 @@ export default function ArticleCard({ article }) {
     <div className="articleCard__container">
       <Link href="/blog/[slug]" as={`/blog/${article.slug}`} passHref>
         <a>
-          <Image className='card__image' src={article.image.url} width={16} height={9} layout="responsive" alt="test" />
+          <Image priority className='card__image' src={article.image.url} width={16} height={9} layout="responsive" alt="test" />
         </a>
       </Link>
       <div className="articleCard__title">

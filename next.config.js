@@ -1,5 +1,8 @@
 require('@svgr/webpack');
 module.exports = {
+  experimental: {
+    suspense: true
+  },
   swcMinify: true,
   reactStrictMode: true,
   poweredByHeader: false,

@@ -7,7 +7,7 @@ export default function Home({ articles }) {
 
     return (
         <div className="page__container">
-            <h2 style={{ textAlign: "center" }}> Posts with tag "{router.query.tag}"</h2>
+            <h2 style={{ textAlign: "center" }}> Posts with tag &lsquo;{router.query.tag}&rsquo;</h2>
             <ArticleList articles={articles} />
         </div>
     );

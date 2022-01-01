@@ -1,5 +1,5 @@
 import Form from '../components/Form';
-
+import Head from 'next/head';
 export default function contact() {
     const fields = [
         {
@@ -43,6 +43,9 @@ export default function contact() {
     );
     return (
         <div className="page__container">
+            <Head>
+                <title>Contact Me</title>
+            </Head>
             <Form
                 fields={fields}
                 header={header}
