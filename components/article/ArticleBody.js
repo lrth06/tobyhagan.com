@@ -3,10 +3,14 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tag from '../../icons/tag.svg'
-const CustomCode = dynamic((props) => import('./CustomCode').then(mod => mod.CustomCode))
-const CustomImage = dynamic((props) => import('./CustomImage').then(mod => mod.CustomImage))
+
 
 export default function Article({ article }) {
+  const CustomCode = dynamic((props) => import('./CustomCode').then(mod => mod.CustomCode))
+  const CustomImage = dynamic((props) => import('./CustomImage').then(mod => mod.CustomImage))
+  const myLoader = ({ src, width, quality }) => {
+    return `https://tobyhagan.com/${src}?w=${width}&q=${quality || 50}`
+  }
   return (
     <>
       {article ? (
@@ -18,8 +22,9 @@ export default function Article({ article }) {
                 src={article.image.url}
                 width={16}
                 height={9}
+                loader={myLoader}
                 layout="responsive"
-                alt="test"
+                alt={article.image.alt}
               />
             </div>
           </div>
