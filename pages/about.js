@@ -16,7 +16,7 @@ export default function about() {
                 <meta property="og:description" content="Information about Toby Hagan and his technical abilities." />
             </Head>
             <div className="bio__photo">
-                <Image priority src='https://storage.googleapis.com/tobyhagan_post_images/Toby.jpg' width={1} height={1} layout="responsive" alt={article.image.alt} />
+                <Image priority src='https://storage.googleapis.com/tobyhagan_post_images/Toby.jpg' width={1} height={1} layout="responsive" alt='Toby Hagan' />
             </div>
             <h2>I&apos;m Toby!</h2>
             <p>I&apos;m a software engineer and technical educator from rural Virginia. I&apos;m passionate about enabling others through effective tooling and education. I love to learn and teach, and I&apos;m always looking for a new challenge. I&apos;m an efficient team player, always ready to take the lead.</p>
