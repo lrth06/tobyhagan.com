@@ -1,9 +1,11 @@
 import Markdown from 'markdown-to-jsx';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tag from '../../icons/tag.svg'
-import { CustomCode } from './CustomCode';
-import { CustomImage } from './CustomImage'
+const CustomCode = dynamic((props) => import('./CustomCode').then(mod => mod.CustomCode))
+const CustomImage = dynamic((props) => import('./CustomImage').then(mod => mod.CustomImage))
+
 export default function Article({ article }) {
   return (
     <>
