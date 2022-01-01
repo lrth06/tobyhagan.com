@@ -8,9 +8,9 @@ export default function ArticleList({ articles }) {
   return (
     <div className="article__list">
       {articles && articles.length > 0 &&
-        articles.map(article => (
+        articles.map((article, index) => (
           <>
-            <Suspense fallback={<CardLoader />} key={article._id}>
+            <Suspense fallback={<CardLoader key={index} />} key={article._id}>
               <ArticleCard key={article._id} article={article} />
             </Suspense>
           </>

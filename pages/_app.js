@@ -41,7 +41,6 @@ function MyApp({ Component, pageProps }) {
       localStorage.setItem('dark', false);
     }
   }, [dark, setDark]);
-
   return (
     <ThemeContext.Provider value={themeValue}>
       <div className="app__container">
