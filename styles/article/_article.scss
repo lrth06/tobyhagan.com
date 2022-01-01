@@ -95,3 +95,21 @@ blockquote p {
     margin: 0.5em;
   }
 }
+
+@media screen and (max-width: $laptop) {
+  .articleCard__container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .articleCard__container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .articleCard__container {
+    width: 95%;
+  }
+}
