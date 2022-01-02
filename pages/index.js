@@ -7,10 +7,10 @@ export default function Home({ articles }) {
   return (
     <div>
       <Head>
-        <title>Toby Hagan</title>
+        <title>Toby Hagan | Software Engineer</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="site-name" content="Toby Hagan" />
-        <meta name="description" content="Toby Hagan is a software engineer technical and educator, creating responsive, accesible tools and applications." />
+        <meta name="description" content="Toby Hagan is a software engineer technical and educator, creating responsive, accesible tools and applications. " />
         <meta name="keywords" content="Softwarer engineer, software developer, developer, web development, tutorials, react, nextjs, javascript"
         />
         <meta property="og:title" content="Toby Hagan" />

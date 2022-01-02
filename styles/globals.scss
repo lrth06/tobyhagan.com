@@ -40,7 +40,7 @@ button:active {
 }
 svg {
   fill: #18181a;
-  transition: fill 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: fill 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .app__container {
@@ -50,7 +50,7 @@ svg {
   background-color: #f9f9f9;
   color: #18181a;
   transition: background-color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045),
-    color 0.5s cubic-bezier(1, 0, 0, 1);
+    color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .page__container {
   width: 60%;

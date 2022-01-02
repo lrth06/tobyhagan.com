@@ -4,10 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Tag from '../../icons/tag.svg'
 
-
 export default function Article({ article }) {
   const CustomCode = dynamic((props) => import('./CustomCode').then(mod => mod.CustomCode))
   const CustomImage = dynamic((props) => import('./CustomImage').then(mod => mod.CustomImage))
+  const CustomList = dynamic((props) => import('./CustomList').then(mod => mod.CustomList))
   return (
     <>
       {article ? (
@@ -28,9 +28,11 @@ export default function Article({ article }) {
           <p className="post__author">
             BY: {article.author} | on: <span className="post__date">{article.created_at.toString().substring(4, 16)}</span>
           </p>
-          <Tag />
 
           <ul className="post__tags">
+            <li className='post__tag'>
+              <Tag />
+            </li>
             {article.tags.length > 0 && article.tags.map((tag, index) => (
               <li key={index} className="post__tag">
                 <Link href="/blog/tags/[tag]" as={`/blog/tags/${tag}`} key={index} passHref>
@@ -40,6 +42,7 @@ export default function Article({ article }) {
               </li>
             ))}
           </ul>
+
 
           <div className="post__body">
             <Markdown
@@ -52,7 +55,11 @@ export default function Article({ article }) {
                   img: {
                     component: CustomImage,
                   },
+                  ul: {
+                    component: CustomList,
+                  },
                 },
+
               }}
             >{article.body}</Markdown>
           </div>

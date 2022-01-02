@@ -6,7 +6,7 @@ export default function about() {
     return (
         <div className="page__container">
             <Head>
-                <title>Toby Hagan</title>
+                <title>About Me</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="site-name" content="Toby Hagan" />
                 <meta name="description" content="Information about Toby Hagan and his technical abilities." />
