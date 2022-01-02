@@ -94,7 +94,7 @@ export default function BlogPost({ article }) {
                     property="og:url"
                     content={`https://tobyhagan.com/blog/${article.slug}`}
                 />
-                <meta property="og:image" content={article.image.url} />
+                <meta property="og:image" content={`https://tobyhagan.com/${article.image.url}?w='1600'&q='50'`} />
                 <meta property="og:description" content={article.excerpt} />
                 <meta property="article:author" content={article.author} />
                 <meta property="article:published_time" content={article.created_at} />
@@ -110,10 +110,7 @@ export default function BlogPost({ article }) {
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={article.title} />
                 <meta name="twitter:description" content={article.excerpt} />
-                <meta name="twitter:image" content={article.image.url} />
-                <meta property="og:title" content={article.title} key="title" />
-                <meta property="og:description" content={article.excerpt} />
-                <meta property="og:image" content={article.image.url} />
+                <meta name="twitter:image" content={`https://tobyhagan.com/${article.image.url}?w='1600'&q='50'`} />
 
 
             </Head>

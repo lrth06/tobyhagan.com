@@ -9,11 +9,9 @@ export default function ArticleList({ articles }) {
     <div className="article__list">
       {articles && articles.length > 0 &&
         articles.map((article, index) => (
-          <>
-            <Suspense fallback={<CardLoader key={index} />} key={index}>
-              <ArticleCard key={article._id} article={article} />
-            </Suspense>
-          </>
+          <Suspense fallback={<CardLoader key={index} />} key={index} >
+            <ArticleCard key={article._id} article={article} />
+          </Suspense>
         ))}
     </div>
   );
