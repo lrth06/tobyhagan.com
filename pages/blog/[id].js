@@ -33,6 +33,7 @@ export default function BlogPost({ article }) {
                         author: {
                             "@type": "Person",
                             name: article.author,
+                            url: "https://tobyhagan.com",
                         },
                     }),
                 }}

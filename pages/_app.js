@@ -65,6 +65,7 @@ function MyApp({ Component, pageProps }) {
                 streetAddress: "Christiansburg, Va",
               },
               url: "https://tobyhagan.com",
+              image: "https://tobyhagan.com/images/logo.png",
               priceRange: "$$",
               telephone: "+15402008108",
               openingHoursSpecification: [
