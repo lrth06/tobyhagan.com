@@ -92,7 +92,7 @@ function MyApp({ Component, pageProps }) {
           <meta name="googlebot" content="index, follow" />
           <meta name="referrer" content="origin" />
           <meta name="copyright" content="Toby Hagan" />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="/manifest.webmanifest" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Layout>

@@ -37,6 +37,10 @@ export default function Form({ fields, header, button, endpoint }) {
             if (res.headers.refresh) {
                 localStorage.setItem('Refresh', res.headers.refresh);
             }
+            fields.map(field => {
+                return (values[field.name] = '');
+            }
+            )
         } catch (err) {
             setStatus({
                 loading: false,
@@ -44,6 +48,7 @@ export default function Form({ fields, header, button, endpoint }) {
                 error: err.response.data,
             });
         }
+
     };
 
     return (
