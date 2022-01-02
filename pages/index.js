@@ -10,16 +10,19 @@ export default function Home({ articles }) {
         <title>Toby Hagan</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="site-name" content="Toby Hagan" />
-        <meta name="description" content="Toby Hagan is a software engineer and educator, focused primarily on code based tutorials and walkthroughs." />
+        <meta name="description" content="Toby Hagan is a software engineer technical and educator, creating responsive, accesible tools and applications." />
         <meta name="keywords" content="Softwarer engineer, software developer, developer, web development, tutorials, react, nextjs, javascript"
         />
         <meta property="og:title" content="Toby Hagan" />
-        <meta property="og:description" content="Toby Hagan is a software engineer and educator, focused primarily on code based tutorials and walkthroughs." />
+        <meta property="og:description" content="Toby Hagan is a software engineer technical and educator, creating responsive, accesible tools and applications." />
       </Head>
       <div className="page__container">
         <div className='page__header'>
-          <h1>Welcome to my site!</h1>
-          <p>This is a blog about technology... and life.</p>
+
+          <h1>Toby Hagan | Software Engineer</h1>
+
+
+          <h3>This is a blog about technology... and life.</h3>
         </div>
         <p>I&apos;m Toby Hagan, a software engineer and educator, currently focused primarily on code based tutorials and walkthroughs.On this page, you&apos;ll find a variety of topics, ranging from full start to finish courses, to snippets that just make life easier. My work can also be found on <Link href="https://github.com/lrth06"><a>GitHub</a></Link>. Check out my <Link href="/about"><a>About</a></Link> page for more information about me, then take a look at my <Link href="/blog"><a>Blog</a></Link> for more information about my work. If you have any questions or comments, feel free to <Link href="/contact"><a>Contact Me</a></Link>.
         </p>

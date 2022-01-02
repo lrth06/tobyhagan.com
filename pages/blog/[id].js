@@ -106,10 +106,10 @@ export default function BlogPost({ article }) {
                     property="article:modified_time"
                     content={article.updated_at ? article.updated_at : article.created_at}
                 />
-                <meta property="article:tag" value={article.tags[0]} />
-                <meta property="article:tag" value={article.tags[1]} />
-                <meta property="article:tag" value={article.tags[2]} />
-                <meta property="article:tag" value={article.tags[3]} />
+                <meta property="article:tag" content={article.tags[0]} />
+                <meta property="article:tag" content={article.tags[1]} />
+                <meta property="article:tag" content={article.tags[2]} />
+                <meta property="article:tag" content={article.tags[3]} />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={article.title} />
