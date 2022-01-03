@@ -33,9 +33,17 @@ export default function Home({ articles }) {
             />
 
             <Head>
-                <title>Blog</title>
-                <meta name="description" content="Blog posts by Toby Hagan" />
+                <title>Toby Hagan Blog | Technology | Software Engineering</title>
 
+                <meta name="description" content="Blog posts by Toby Hagan about a range of topics revolving around technology and programming tutorials" />
+                <meta name="keywords" content="software engineer, software developer, developer, web development, tutorials, react, nextjs, javascript" />
+                <meta property="og:title" content="Toby Hagan Blog | Technology | Software Engineering" />
+                <meta property="og:description" content="Blog posts by Toby Hagan about a range of topics revolving around technology and programming tutorials" />
+                <meta property="og:image" content="https://tobyhagan.com/images/og_image.jpg" />
+                <meta property="og:url" content="https://tobyhagan.com/blog" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Toby Hagan" />
+                <meta property="canonical" content="https://tobyhagan.com/blog" />
             </Head>
             <h1 style={{ textAlign: "center" }}>Recent Blog Posts</h1>
             <ArticleList articles={articles} />

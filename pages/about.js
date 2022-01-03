@@ -6,14 +6,19 @@ export default function about() {
     return (
         <div className="page__container">
             <Head>
-                <title>About Me</title>
+                <title>About Toby Hagan</title>
                 <link rel="icon" href="/favicon.ico" />
-                <meta name="site-name" content="Toby Hagan" />
-                <meta name="description" content="Information about Toby Hagan and his technical abilities." />
-                <meta name="keywords" content="Softwarer engineer, software developer, developer, web development, tutorials, react, nextjs, javascript"
-                />
-                <meta property="og:title" content="Toby Hagan" />
-                <meta property="og:description" content="Information about Toby Hagan and his technical abilities." />
+                <meta name="site-name" content="About Toby Hagan" />
+                <meta name="description" content="Toby Hagan is a Software Engineer knowledgable in a range of programming languages and frameworks." />
+                <meta name="keywords" content="Software engineer, software developer, developer, web development, tutorials, react, nextjs, javascript, profile, about" />
+                <meta property="og:title" content="About Toby Hagan" />
+                <meta property="og:description" content="Toby Hagan is a Software Engineer knowledgable in a range of programming languages and frameworks." />
+                <meta property="og:image" content="https://tobyhagan.com/images/toby.jpg" />
+                <meta property="og:url" content="https://tobyhagan.com/about" />
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Toby Hagan" />
+                <meta property="canonical" content="https://tobyhagan.com/about" />
+
             </Head>
             <div className="bio__photo">
                 <Image priority src='https://storage.googleapis.com/tobyhagan_post_images/Toby.jpg' width={1} height={1} layout="responsive" alt='Toby Hagan' />

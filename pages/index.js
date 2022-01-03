@@ -7,14 +7,19 @@ export default function Home({ articles }) {
   return (
     <div>
       <Head>
-        <title>Toby Hagan | Software Engineer</title>
+        <title>Toby Hagan | Software Engineer | Educator</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="site-name" content="Toby Hagan" />
-        <meta name="description" content="Toby Hagan is a software engineer technical and educator, creating responsive, accesible tools and applications. " />
+        <meta name="description" content="Toby Hagan is a software engineer technical and educator, creating responsive, accesible tools and applications." />
         <meta name="keywords" content="Softwarer engineer, software developer, developer, web development, tutorials, react, nextjs, javascript"
         />
-        <meta property="og:title" content="Toby Hagan" />
+        <meta property="og:title" content="Toby Hagan | Software Engineer | Educator" />
         <meta property="og:description" content="Toby Hagan is a software engineer technical and educator, creating responsive, accesible tools and applications." />
+        <meta property="og:image" content="https://tobyhagan.com/images/og_image.jpg" />
+        <meta property="og:url" content="https://tobyhagan.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Toby Hagan" />
+        <meta property="canonical" content="https://tobyhagan.com" />
       </Head>
       <div className="page__container">
         <div className='page__header'>

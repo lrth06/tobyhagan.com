@@ -8,6 +8,7 @@ export default function Article({ article }) {
   const CustomCode = dynamic((props) => import('./CustomCode').then(mod => mod.CustomCode))
   const CustomImage = dynamic((props) => import('./CustomImage').then(mod => mod.CustomImage))
   const CustomList = dynamic((props) => import('./CustomList').then(mod => mod.CustomList))
+  const CustomLink = dynamic((props) => import('./CustomLink').then(mod => mod.CustomLink))
   return (
     <>
       {article ? (
@@ -57,6 +58,9 @@ export default function Article({ article }) {
                   },
                   ul: {
                     component: CustomList,
+                  },
+                  a: {
+                    component: CustomLink,
                   },
                 },
 
