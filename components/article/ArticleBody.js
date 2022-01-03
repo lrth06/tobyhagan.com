@@ -78,18 +78,6 @@ export default function Article({ article }) {
         </div>
       )
       }
-      <div className="scroll-to-top"
-        onClick={() => {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-          });
-        }
-        }
-
-      >
-        <p>Scroll To Top {<ArrowUp />}</p>
-      </div >
     </>
   );
 }
