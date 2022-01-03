@@ -1,5 +1,6 @@
 import { PrismAsyncLight as SyntaxHighlighter } from "react-syntax-highlighter";
-import { nord, prism } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { nord } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { vs } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 export function CustomCode({ children }) {
@@ -7,7 +8,7 @@ export function CustomCode({ children }) {
     const language = children.props.className.replace("lang-", "");
     return (
         <SyntaxHighlighter
-            style={dark ? nord : prism}
+            style={dark ? nord : vs}
             language={language}
         >
             {children.props.children}

@@ -1,5 +1,6 @@
+const withPreact = require('next-plugin-preact')
 require('@svgr/webpack');
-module.exports = {
+module.exports = withPreact({
   swcMinify: true,
   reactStrictMode: true,
   poweredByHeader: false,
@@ -29,4 +30,4 @@ module.exports = {
     locales: ['en'],
     defaultLocale: 'en',
   },
-};
+});

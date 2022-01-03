@@ -44,8 +44,6 @@ export default function Article({ article }) {
               </li>
             ))}
           </ul>
-
-
           <div className="post__body">
             <Markdown
               options={{

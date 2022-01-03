@@ -83,6 +83,10 @@ function MyApp({ Component, pageProps }) {
           }}
         />
         <Script
+          strategy='afterInteractive'
+          data-ad-client="ca-pub-3262452708565609" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        />
+        <Script
           id="localBusiness"
           strategy="afterInteractive"
           type="application/ld+json"
@@ -132,6 +136,7 @@ function MyApp({ Component, pageProps }) {
 
           <link rel="manifest" href="/manifest.webmanifest" />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="preconnect" href="https://www.googletagmanager.com/" />
         </Head>
         <Layout>
           <Component {...pageProps} />

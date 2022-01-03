@@ -11,20 +11,19 @@
   overflow: hidden;
   position: relative;
 }
-
 .post__author,
 .card__author {
   font-size: 1.2em;
   font-family: "Open Sans SemiCondensed";
   span {
     transition: color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    color: $accent-color;
+    color: $border-color;
   }
 }
 .dark .post__author,
 .dark .card__author {
   span {
-    color: $border-color;
+    color: $accent-color;
     transition: color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   }
 }
@@ -79,6 +78,18 @@ blockquote p {
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
+code {
+  font-size: 0.75em !important;
+  font-family: "Fira Code", monospace !important;
+  padding: 0.1em 0.2em !important;
+  font-weight: 500;
+}
+pre {
+  font-size: 1em !important;
+  font-family: "Fira Code", monospace !important;
+  padding: 0.1em 0.2em !important;
+  font-weight: 500;
+}
 
 .articleCard__container {
   width: 60%;
@@ -115,6 +126,7 @@ blockquote p {
     }
   }
 }
+
 .scroll-to-top {
   cursor: pointer;
   z-index: 1;
