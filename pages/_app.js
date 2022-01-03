@@ -1,5 +1,5 @@
 import '../styles/globals.scss'
-import * as gtag from "../components/utils/gtag";
+import { GA_TRACKING_ID, pageview, event } from "../components/utils/gtag";
 
 import Layout from '../components/Layout';
 import { ThemeContext } from '../context/ThemeContext';
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       const handleRouteChange = (url) => {
-        gtag.pageview(url);
+        pageview(url);
       };
       router.events.on("routeChangeComplete", handleRouteChange);
       return () => {
@@ -64,7 +64,7 @@ function MyApp({ Component, pageProps }) {
     <ThemeContext.Provider value={themeValue}>
       <Script
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
       />
       <Script
         id="gtag-init"
@@ -74,7 +74,7 @@ function MyApp({ Component, pageProps }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${gtag.GA_TRACKING_ID}', {
+            gtag('config', '${GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,
