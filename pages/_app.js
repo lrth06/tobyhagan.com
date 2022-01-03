@@ -1,5 +1,5 @@
 import '../styles/globals.scss'
-import { GA_TRACKING_ID, pageview, event } from "../components/utils/gtag";
+import * as gtag from "../components/utils/gtag";
 
 import Layout from '../components/Layout';
 import { ThemeContext } from '../context/ThemeContext';
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     if (process.env.NODE_ENV === "production") {
       const handleRouteChange = (url) => {
-        pageview(url);
+        gtag.pageview(url);
       };
       router.events.on("routeChangeComplete", handleRouteChange);
       return () => {
@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }) {
       };
     }
   }, [router.events]);
+
   useEffect(() => {
     const darkPreference = localStorage.getItem('dark');
 
@@ -62,64 +63,63 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ThemeContext.Provider value={themeValue}>
-      <Script
-        strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-      />
-      <Script
-        id="gtag-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+      <div className="app__container">
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,
-        }}
-      />
-      <Script
-        id="localBusiness"
-        strategy="afterInteractive"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Toby Hagan",
-            address: {
-              "@type": "PostalAddress",
-              addressLocality: "Christiansburg",
-              addressRegion: "VA",
-              postalCode: "24073",
-              addressCountry: "US",
-              streetAddress: "Christiansburg, Va",
-            },
-            url: "https://tobyhagan.com",
-            image: "https://tobyhagan.com/images/toby.jpg",
-            priceRange: "$$",
-            telephone: "+15402008108",
-            openingHoursSpecification: [
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: "Saturday",
-                opens: "00:00",
-                closes: "23:59",
+          }}
+        />
+        <Script
+          id="localBusiness"
+          strategy="afterInteractive"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Toby Hagan",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Christiansburg",
+                addressRegion: "VA",
+                postalCode: "24073",
+                addressCountry: "US",
+                streetAddress: "Christiansburg, Va",
               },
-              {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: "Sunday",
-                opens: "00:00",
-                closes: "00:00",
-              },
-            ],
-          })
-        }}
-      />
-      <div className="app__container">
-
+              url: "https://tobyhagan.com",
+              image: "https://tobyhagan.com/images/toby.jpg",
+              priceRange: "$$",
+              telephone: "+15402008108",
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Saturday",
+                  opens: "00:00",
+                  closes: "23:59",
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: "Sunday",
+                  opens: "00:00",
+                  closes: "00:00",
+                },
+              ],
+            })
+          }}
+        />
         <Head>
           <meta charSet="utf-8" />
           <meta name="theme-color" content="#1e2227" />
