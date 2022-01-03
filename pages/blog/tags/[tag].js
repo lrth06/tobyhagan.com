@@ -2,11 +2,20 @@ import ArticleList from '../../../components/article/ArticleList';
 import Article from '../../../lib/models/Article';
 import dbConnect from '../../../lib/config/db';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 export default function Home({ articles }) {
     const router = useRouter();
 
     return (
         <div className="page__container">
+            <Head>
+                <title>Toby Hagan | Blog | Tags</title>
+                <meta name="description" content={`Blog posts containing ${router.params.tag}`} />
+                <meta name="og:title" content={`Toby Hagan | Blog | Tags`} />
+                <meta name="og:description" content={`Blog posts containing ${router.params.tag}`} />
+                <meta name="twitter:title" content={`Toby Hagan | Blog | Tags`} />
+                <meta name="twitter:description" content={`Blog posts containing ${router.params.tag}`} />
+            </Head>
             <h2 style={{ textAlign: "center" }}> Posts with tag &lsquo;{router.query.tag}&rsquo;</h2>
             <ArticleList articles={articles} />
         </div>
