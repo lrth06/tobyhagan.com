@@ -1,10 +1,5 @@
-import Link from 'next/link'
-export default function CustomLink({ children }) {
-    const href = children.props.href;
-    const as = children.props.as;
+export function CustomLink({ href, children }) {
     return (
-        <Link href={href} as={as}>
-            {children}
-        </Link>
+        <a href={href} target="_blank" rel="noopener"> {children}</a>
     )
 }

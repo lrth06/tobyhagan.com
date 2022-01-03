@@ -44,6 +44,8 @@ export default function Home({ articles }) {
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Toby Hagan" />
                 <meta property="canonical" content="https://tobyhagan.com/blog" />
+                <meta property="og:canonical" content="https://tobyhagan.com/blog" />
+
             </Head>
             <h1 style={{ textAlign: "center" }}>Recent Blog Posts</h1>
             <ArticleList articles={articles} />

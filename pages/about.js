@@ -18,6 +18,8 @@ export default function about() {
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Toby Hagan" />
                 <meta property="canonical" content="https://tobyhagan.com/about" />
+                <meta property="og:canonical" content="https://tobyhagan.com/about" />
+
 
             </Head>
             <div className="bio__photo">

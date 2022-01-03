@@ -62,6 +62,7 @@ export default function Article({ article }) {
                   a: {
                     component: CustomLink,
                   },
+
                 },
 
               }}

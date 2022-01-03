@@ -40,6 +40,38 @@ export default function BlogPost({ article }) {
                 }}
             />
             <Script
+                id="NewsArticle"
+                strategy="afterInteractive"
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "NewsArticle",
+                        headline: article.title,
+                        alternativeHeadline: article.excerpt,
+                        image: article.image.url,
+                        editor: article.author,
+                        genre: article.tags[0],
+                        keywords: article.tags.map((tag) => {
+                            return tag;
+                        }),
+                        wordcount: article.body.split("").length,
+                        publisher: "Toby Hagan",
+                        url: "https://tobyhagan.com",
+                        datePublished: article.created_at.substring(0, 10),
+                        dateCreated: article.created_at.substring(0, 10),
+                        dateModified: article.updated_at.substring(0, 10),
+                        description: article.excerpt,
+                        articleBody: article.body.replace(/\n/g, " ").replace("/#w+s*/"),
+                        author: {
+                            "@type": "Person",
+                            name: article.author,
+                            url: "https://tobyhagan.com",
+                        },
+                    }),
+                }}
+            />
+            <Script
                 id="breadCrumbs"
                 strategy="afterInteractive"
                 type="application/ld+json"
@@ -100,6 +132,8 @@ export default function BlogPost({ article }) {
                 <meta property="og:description" content={article.excerpt} />
                 <meta property="article:author" content={article.author} />
                 <meta property="article:published_time" content={article.created_at} />
+                <meta property="og:canonical" content="https://tobyhagan.com" />
+
                 <meta
                     property="article:modified_time"
                     content={article.updated_at ? article.updated_at : article.created_at}

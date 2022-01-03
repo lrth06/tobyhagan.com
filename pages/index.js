@@ -20,6 +20,7 @@ export default function Home({ articles }) {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Toby Hagan" />
         <meta property="canonical" content="https://tobyhagan.com" />
+        <meta property="og:canonical" content="https://tobyhagan.com" />
       </Head>
       <div className="page__container">
         <div className='page__header'>
