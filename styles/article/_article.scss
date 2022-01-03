@@ -18,7 +18,6 @@
   font-family: "Open Sans SemiCondensed";
   span {
     transition: color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-
     color: $accent-color;
   }
 }
@@ -48,11 +47,10 @@
   }
 }
 .post__body-image {
-  width: 50%;
+  width: 75%;
   height: auto;
   margin: 0 auto;
   text-align: center;
-  // padding-bottom: 0.5em;
   padding: 0.5em 0;
   border-bottom: 2px solid $border-color;
 
@@ -116,6 +114,13 @@ blockquote p {
       position: relative;
     }
   }
+}
+.scroll-to-top {
+  cursor: pointer;
+  z-index: 1;
+  float: right;
+  bottom: 1em;
+  right: 2.5em;
 }
 @media screen and (max-width: $laptop) {
   .articleCard__container {

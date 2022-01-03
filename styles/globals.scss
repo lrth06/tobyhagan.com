@@ -4,6 +4,7 @@
 @use "./variables/colors" as *;
 @use "./variables/text" as *;
 @use "./variables/breakpoints" as *;
+@use "./variables/shadows" as *;
 @forward "./reset";
 @forward "./pages/about";
 @forward "./layout/";

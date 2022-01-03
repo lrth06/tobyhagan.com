@@ -3,6 +3,7 @@ import Article from '../lib/models/Article';
 import dbConnect from '../lib/config/db';
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 export default function Home({ articles }) {
   return (
     <div>
@@ -36,8 +37,17 @@ export default function Home({ articles }) {
         <div className='page__header'>
 
           <h1>Toby Hagan | Software Engineer</h1>
-
-
+          <div className='page__hero'>
+            <div className='page__hero-content'>
+              <Image
+                priority
+                src="/images/toby_pond.webp"
+                width={16}
+                height={9}
+                layout="responsive"
+              />
+            </div>
+          </div>
           <h3>This is a blog about technology... and life.</h3>
         </div>
         <p>I&apos;m Toby Hagan, a software engineer and educator, currently focused primarily on code based tutorials and walkthroughs.On this page, you&apos;ll find a variety of topics, ranging from full start to finish courses, to snippets that just make life easier. My work can also be found on <Link href="https://github.com/lrth06"><a>GitHub</a></Link>. Check out my <Link href="/about"><a>About</a></Link> page for more information about me, then take a look at my <Link href="/blog"><a>Blog</a></Link> for more information about my work. If you have any questions or comments, feel free to <Link href="/contact"><a>Contact Me</a></Link>.

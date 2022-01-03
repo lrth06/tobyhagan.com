@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import Tag from '../../icons/tag.svg'
+import ArrowUp from '../../icons/arrow-up.svg'
 
 export default function Article({ article }) {
   const CustomCode = dynamic((props) => import('./CustomCode').then(mod => mod.CustomCode))
@@ -26,10 +27,10 @@ export default function Article({ article }) {
             </div>
           </div>
           <h1>{article.title}</h1>
+          <h2>{article.excerpt}</h2>
           <p className="post__author">
             BY: {article.author} | on: <span className="post__date">{article.created_at.toString().substring(4, 16)}</span>
           </p>
-
           <ul className="post__tags">
             <li className='post__tag'>
               <Tag />
@@ -68,13 +69,27 @@ export default function Article({ article }) {
               }}
             >{article.body}</Markdown>
           </div>
+
         </div >
+
       ) : (
         <div className="page__container">
           <div>Loading...</div>
         </div>
       )
       }
+      <div className="scroll-to-top"
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
+        }
+        }
+
+      >
+        <p>Scroll To Top {<ArrowUp />}</p>
+      </div >
     </>
   );
 }
