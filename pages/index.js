@@ -13,6 +13,7 @@ export default function Home({ articles }) {
         <meta name="keywords" content="Softwarer engineer, software developer, developer, web development, tutorials, react, nextjs, javascript"
         />
         <meta name="site-name" content="Toby Hagan" />
+        <meta name="robots" content="index, follow" />
 
         <meta property="canonical" content="https://tobyhagan.com" />
 

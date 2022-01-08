@@ -10,6 +10,7 @@ export default function about() {
                 <link rel="icon" href="/favicon.ico" />
                 <meta name="site-name" content="About Toby Hagan" />
                 <meta name="description" content="Toby Hagan is a Software Engineer knowledgable in a range of programming languages and frameworks." />
+                <meta name="robots" content="index, follow" />
                 <meta name="keywords" content="Software engineer, software developer, developer, web development, tutorials, react, nextjs, javascript, profile, about" />
                 <meta property="og:title" content="About Toby Hagan" />
                 <meta property="og:description" content="Toby Hagan is a Software Engineer knowledgable in a range of programming languages and frameworks." />

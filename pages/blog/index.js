@@ -34,7 +34,7 @@ export default function Home({ articles }) {
 
             <Head>
                 <title>Toby Hagan Blog | Technology | Software Engineering</title>
-
+                <meta name="robots" content="index, follow" />
                 <meta name="description" content="Blog posts by Toby Hagan about a range of topics revolving around technology and programming tutorials" />
                 <meta name="keywords" content="software engineer, software developer, developer, web development, tutorials, react, nextjs, javascript" />
                 <meta property="og:title" content="Toby Hagan Blog | Technology | Software Engineering" />

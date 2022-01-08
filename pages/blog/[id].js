@@ -133,6 +133,9 @@ export default function BlogPost({ article }) {
                 <meta property="article:author" content={article.author} />
                 <meta property="article:published_time" content={article.created_at} />
                 <meta property="og:canonical" content="https://tobyhagan.com" />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta property="referrer" content="origin" />
+                <meta property="index" content="index" />
 
                 <meta
                     property="article:modified_time"
@@ -159,6 +162,9 @@ export async function getServerSideProps({ params }) {
     if (!process.env.MONGODB_URI) { return { props: { article: null } } }
     await dbConnect()
     const article = await Article.findOne({ slug: params.id }).lean()
+    if (!article) {
+        return { redirect: { destination: "/404", permanent: true } }
+    }
     article._id = article._id.toString()
     article.created_at = article.created_at.toString()
     article.updated_at = article.updated_at.toString()
