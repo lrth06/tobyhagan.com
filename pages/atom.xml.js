@@ -41,8 +41,9 @@ export async function getServerSideProps({ res }) {
           </author>
           <updated>${new Date(article.updated_at).toISOString()}</updated>
           <summary>${article.excerpt}</summary>
-      </entry>`)
-    }).join("")}
+      </entry>
+      `);
+    })}
     </feed>`;
 
 
