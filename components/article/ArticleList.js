@@ -5,8 +5,8 @@ export default function ArticleList({ articles }) {
   return (
     <div className="article__list">
       {articles && articles.length > 0 &&
-        articles.map((article, index) => (
-          <ArticleCard key={article._id} article={article} />
+        articles.map((article) => (
+          <ArticleCard key={article.created_at} article={article} />
         ))}
     </div>
   );
