@@ -27,7 +27,7 @@ export async function getServerSideProps({ res }) {
       <link href="https://tobyhagan.com/atom.xml" rel="self" />
       <link href="https://tobyhagan.com/" />
       <id>urn:uuid:a6c42692-3186-4235-a78b-ba8078ae34a8</id>
-      <updated>${new Date()}</updated>
+      <updated>${new Date().toISOString()}</updated>
       
       ${articles.map((article) => {
         return (`
@@ -47,7 +47,6 @@ export async function getServerSideProps({ res }) {
       
     </feed>`;
 
-    //convert 
 
     res.setHeader("Content-Type", "text/xml");
     res.write(feed);
