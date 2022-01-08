@@ -131,6 +131,9 @@ function MyApp({ Component, pageProps }) {
           <meta name="copyright" content="Toby Hagan" />
           <meta property="og:site_name" content="Toby Hagan" />
 
+          <link rel="alternate" type="application/rss+xml"
+            title="RSS Feed for tobyhagan.com"
+            href="/atom.xml" />
           <link rel="manifest" href="/manifest.webmanifest" />
           <link rel="icon" href="/favicon.ico" />
           <link rel="preconnect" href="https://www.googletagmanager.com/" />

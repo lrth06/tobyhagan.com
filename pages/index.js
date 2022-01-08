@@ -43,8 +43,8 @@ export default function Home({ articles }) {
               <Image
                 priority
                 src="/images/toby_pond.webp"
-                width={16}
-                height={9}
+                width={1600}
+                height={900}
                 layout="responsive"
               />
             </div>

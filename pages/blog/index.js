@@ -3,6 +3,7 @@ import Article from '../../lib/models/Article';
 import dbConnect from '../../lib/config/db';
 import Head from 'next/head';
 import Script from 'next/script';
+import Link from 'next/link';
 export default function Home({ articles }) {
     return (
         <div className="page__container">
