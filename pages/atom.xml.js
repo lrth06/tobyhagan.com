@@ -27,7 +27,7 @@ export async function getServerSideProps({ res }) {
       <link href="https://tobyhagan.com/atom.xml" rel="self" />
       <link href="https://tobyhagan.com/" />
       <id>urn:uuid:a6c42692-3186-4235-a78b-ba8078ae34a8</id>
-      <updated>${Date.now()}</updated>
+      <updated>${new Date(article.updated_at).toISOString()}</updated>
       
       ${articles.map((article) => {
         return (`
@@ -35,12 +35,14 @@ export async function getServerSideProps({ res }) {
           <title>${article.title}</title>
           <link href="${baseUrl}/blog/${article.slug}" />
           <id>urn:uuid:${uuidv4()}</id>
-          <author>${article.author}</author>
-          <updated>${new Date(article.updated_at)}</updated>
+          <author>
+            <name>${article.author}</name>
+            <email>toby@tobyhagan.com</email>
+          </author>
+          <updated>${new Date(article.updated_at).toISOString()}</updated>
           <summary>${article.excerpt}</summary>
-      </entry>
-      `);
-    })}
+      </entry>`)
+    }).join("")}
     </feed>`;
 
 
