@@ -11,7 +11,7 @@ module.exports = withPreact({
     domains: ['localhost', 'storage.googleapis.com',],
     formats: ['image/avif', 'image/webp'],
     optimizeImages: true,
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 60 * 24 * 30,
   },
   webpack: (config, { dev, isServer }) => {
     if (!dev && !isServer) {

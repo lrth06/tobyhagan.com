@@ -45,11 +45,11 @@ export default function Home({ articles }) {
                 src="/images/toby_pond.webp"
                 width={1600}
                 height={900}
-                layout="responsive"
+                alt="Toby Hagan"
               />
             </div>
           </div>
-          <h3>This is a blog about technology... and life.</h3>
+          <h2>This is a blog about technology... and life.</h2>
         </div>
         <p>I&apos;m Toby Hagan, a software engineer and educator, currently focused primarily on code based tutorials and walkthroughs.On this page, you&apos;ll find a variety of topics, ranging from full start to finish courses, to snippets that just make life easier. My work can also be found on <Link href="https://github.com/lrth06"><a>GitHub</a></Link>. Check out my <Link href="/about"><a>About</a></Link> page for more information about me, then take a look at my <Link href="/blog"><a>Blog</a></Link> for more information about my work. If you have any questions or comments, feel free to <Link href="/contact"><a>Contact Me</a></Link>.
         </p>
