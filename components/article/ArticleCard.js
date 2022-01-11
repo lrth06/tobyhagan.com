@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Tag from '../../icons/tag.svg'
 import Image from 'next/image';
 export default function ArticleCard({ article }) {
   return (
@@ -15,6 +16,19 @@ export default function ArticleCard({ article }) {
           </a>
         </Link>
         <p className='card__author'>By: {article.author} | on: <span className="post__date">{article.created_at.toString().substring(4, 16)}</span></p>
+        <ul className="post__tags">
+          <li className='post__tag'>
+            <Tag />
+          </li>
+          {article.tags.length > 0 && article.tags.map((tag, index) => (
+            <li key={index} className="post__tag">
+              <Link href="/blog/tags/[tag]" as={`/blog/tags/${tag}`} key={index} passHref>
+                <a> {tag}{index !== article.tags.length - 1 && <span>&nbsp;/</span>}</a>
+              </Link>
+
+            </li>
+          ))}
+        </ul>
         <h3>{article.excerpt}</h3>
         <p className="card__more">
           <Link href="/blog/[slug]" as={`/blog/${article.slug}`} passHref>
@@ -26,7 +40,6 @@ export default function ArticleCard({ article }) {
           </Link>
         </p>
       </div>
-
     </div>
   );
 }

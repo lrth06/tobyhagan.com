@@ -41,6 +41,7 @@ export default function contact() {
             <p> Want to work with me / hire me? Feedback about the site? Reach Out!</p>
         </div>
     );
+
     return (
         <div className="page__container">
             <Head>
