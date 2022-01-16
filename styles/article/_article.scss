@@ -16,7 +16,7 @@
   font-size: 1.2em;
   font-family: "Open Sans SemiCondensed", sans-serif;
   span {
-    transition: color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    // transition: color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     color: $border-color;
   }
 }
@@ -24,7 +24,7 @@
 .dark .card__author {
   span {
     color: $accent-color;
-    transition: color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    // transition: color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   }
 }
 .post__tags {
@@ -123,6 +123,29 @@ pre {
     align-items: center;
     .post__list-item {
       position: relative;
+    }
+  }
+}
+.code__container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  .copy__button {
+    position: absolute;
+    top: 0.375em;
+    right: 0.375em;
+    background-color: transparent;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.2em;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      filter: brightness(0.5);
+    }
+    .copied {
+      fill: green;
+      &:hover {
+        fill: green;
+      }
     }
   }
 }

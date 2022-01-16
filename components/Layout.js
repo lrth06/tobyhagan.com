@@ -66,7 +66,7 @@ export default function Layout({ children }) {
                     onClick={handleNavigationToggle}
                     className="navigation__toggle"
                     style={{
-                        transition: 'all 0.5s ease',
+                        transition: 'transform 0.5s ease',
 
                         transform: open ? 'rotateX(180deg)' : 'rotateX(0deg)',
                     }}

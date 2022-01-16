@@ -13,9 +13,9 @@ a {
   color: inherit;
   text-decoration: none;
   border-bottom: 1px solid $border-color;
-  transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  // transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   &:hover {
-    transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    // transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     border-bottom: 2px solid currentColor;
   }
 }
@@ -47,7 +47,7 @@ button:active {
 }
 svg {
   fill: #18181a;
-  transition: fill 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  // transition: fill 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .app__container {
@@ -56,8 +56,8 @@ svg {
   height: 100%;
   background-color: #f9f9f9;
   color: #18181a;
-  transition: background-color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045),
-    color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  // transition: background-color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045),
+  // color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .page__container {
   width: 60%;

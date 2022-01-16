@@ -13,7 +13,7 @@ export default function ThemeSelector() {
                 justifyContent: 'center',
                 textAlign: 'center',
                 transform: dark ? 'rotate(360deg)' : 'rotate(0deg)',
-                transition: 'all 0.5s ease-in-out',
+                transition: 'transform 0.5s ease-in-out',
             }}
             onClick={() => setDark(!dark)}
         >

@@ -6,7 +6,7 @@
   display: flex;
   width: 100%;
   margin: auto;
-  transition: all 0.1s ease-in-out;
+  // transition: all 0.1s ease-in-out;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
@@ -40,9 +40,9 @@
     border-radius: 0.25em;
     background-color: $accent-color;
     color: $text-color-dark;
-    transition: all 0.1s ease-in-out;
+    // transition: all 0.1s ease-in-out;
     box-shadow: $shadow-button;
-    transition: background-color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    // transition: background-color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
     &:hover {
       filter: brightness(1.1);
@@ -52,7 +52,7 @@
 }
 .dark button {
   background-color: $border-color;
-  transition: background-color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  // transition: background-color 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 .form__footer {
