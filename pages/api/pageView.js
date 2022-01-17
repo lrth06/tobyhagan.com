@@ -8,10 +8,6 @@ export default async function handler(req, res) {
 
     const key = req.body.path
     const ip = req.body.ip
-    if (ip === process.env.LOCAL_TRAFFIC_IP) {
-        return res.status(200).json({ message: 'Local Traffic' });
-
-    }
     const pathExists = await PageView.findOne({ path: key })
     if (!pathExists) {
         const newPath = new PageView({ path: key, views: [{ ip }] })
