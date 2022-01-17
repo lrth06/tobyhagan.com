@@ -1,4 +1,4 @@
-import dbConnect from '../lib/config/db'
+import dbConnect from '../lib/config/mongo'
 import Article from '../lib/models/Article'
 const Sitemap = () => { };
 

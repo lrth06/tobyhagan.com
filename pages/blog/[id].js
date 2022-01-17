@@ -1,4 +1,4 @@
-import dbConnect from '../../lib/config/db';
+import dbConnect from '../../lib/config/mongo';
 import Article from '../../lib/models/Article';
 import ArticleBody from '../../components/article/ArticleBody';
 import Head from 'next/head';

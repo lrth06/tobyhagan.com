@@ -2,7 +2,7 @@
     "theme_color": "#474da9",
     "background_color": "#383838",
     "display": "standalone",
-    "scope": "/blog",
+    "scope": "/",
     "start_url": "/",
     "name": "Toby Hagan Technology Blog",
     "short_name": "TH Blog",

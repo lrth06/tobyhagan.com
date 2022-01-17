@@ -1,6 +1,6 @@
 import ArticleList from '../../components/article/ArticleList';
 import Article from '../../lib/models/Article';
-import dbConnect from '../../lib/config/db';
+import dbConnect from '../../lib/config/mongo';
 import Head from 'next/head';
 import Script from 'next/script';
 import Link from 'next/link';

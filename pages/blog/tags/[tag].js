@@ -1,6 +1,6 @@
 import ArticleList from '../../../components/article/ArticleList';
 import Article from '../../../lib/models/Article';
-import dbConnect from '../../../lib/config/db';
+import dbConnect from '../../../lib/config/mongo';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 export default function Home({ articles }) {
