@@ -21,14 +21,14 @@ export async function getServerSideProps({ res }) {
     await dbConnect();
     const articles = await Article.find({});
     const articleUrls = articles.map((article) => {
-        return `${baseUrl}/article/${article.slug}`;
+        return `${baseUrl}/blog/${article.slug}`;
     });
     staticPages.push(...articleUrls);
     const tags = articles.reduce((acc, article) => {
         return [...acc, ...article.tags];
     }, []);
     const tagUrls = tags.map((tag) => {
-        return `${baseUrl}/tag/${tag}`;
+        return `${baseUrl}/blog/tags/${tag}`;
     });
     staticPages.push(...tagUrls);
 
