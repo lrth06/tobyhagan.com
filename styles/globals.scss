@@ -10,7 +10,7 @@
 @forward "./layout/";
 @forward "./article/article"; // html,
 a {
-  color: inherit;
+  color: currentColor;
   text-decoration: none;
   border-bottom: 1px solid $border-color;
   // transition: all 0.1s cubic-bezier(0.6, -0.28, 0.735, 0.045);
