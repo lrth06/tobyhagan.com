@@ -1,7 +1,7 @@
 
 export async function pageView(route) {
     const res = await fetch(`https://api.ipify.org?format=json`);
-    const ipAddress = await res.json();
+    let ipAddress = await res.json();
     ipAddress = ipAddress.ip;
     const sent = await fetch('/api/pageView', {
         method: 'POST',
