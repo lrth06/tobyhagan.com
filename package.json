@@ -12,7 +12,7 @@
     "axios": "^0.24.0",
     "ioredis": "^4.28.3",
     "markdown-to-jsx": "^7.1.5",
-    "mongoose": "^6.1.4",
+    "mongoose": "^6.4.6",
     "next": "^12.1.0",
     "next-plugin-preact": "^3.0.6",
     "preact": "^10.6.4",
